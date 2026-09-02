@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: code-snippet-organizer
+
+  datasource:
+    url: ${DATABASE_URL:jdbc:postgresql://localhost:5432/code_snippet_organizer}
+    username: ${DATABASE_USERNAME:postgres}
+    password: ${DATABASE_PASSWORD:postgres}
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+    properties:
+      hibernate:
+        format_sql: true
+
+server:
+  port: ${SERVER_PORT:8081}
